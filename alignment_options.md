@@ -31,6 +31,17 @@ Aligned `GM12878_SRR1658581_1pc_1_R2.fastq.h10000` (2500 reads) using bwa mem wi
 ***
 
 ### Examples
+These examples are shown with -X option of samtools to make it easy to read flags.
+```
+p : paired-end
+1 : mate1
+2: mate2
+r : reverse
+R : mate is reverse
+s : secondary alignment
+P : improperly aligned
+```
+
 #### Example 1
 `no option`
 ```
