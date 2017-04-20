@@ -27,6 +27,9 @@ Aligned `GM12878_SRR1658581_1pc_1_R2.fastq.h10000` (2500 reads) using bwa mem wi
 | `-SPM` | 5'soft-clipped and 3'hard-clipped. | The other mate records the soft-clipped as mate. | secondary alignment flag on hard-clipped one | no improper pair flag |
 | `-SP5M` | 3'soft-clipped and 5'hard-clipped. | The other mate records the soft-clipped as mate. | secondary alignment flag on hard-clipped one | no improper pair flag |
 
+* Note
+  * supplementary alignment (vs representative alignment) is an additional chimeric alignment.
+  * secondary alignment (vs primary alignment) is another alignment (multi-mapping)
 
 ***
 
