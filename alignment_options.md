@@ -31,6 +31,9 @@ paired-end flag |
 | SE | no option, no fixmate | 5'soft-clipped and 3'hard-clipped. | no mate matching | supplementary alignment flag on hard-clipped one | no improper pair flag | no paired-end flag
 | SE | no option, fixmate | 5'soft-clipped and 3'hard-clipped. | The other mate records the soft-clipped as mate. | supplementary alignment flag on hard-clipped one | no improper pair flag | no paired-end flag on hard-clipped |
 
+* Note
+  * supplementary alignment (vs representative alignment) is an additional chimeric alignment.
+  * secondary alignment (vs primary alignment) is another alignment (multi-mapping)
 
 ***
 
