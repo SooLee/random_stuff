@@ -12,6 +12,15 @@ Aligned `GM12878_SRR1658581_1pc_1_R2.fastq.h10000` using bwa mem with different 
 | `-SPM` |  | 
 
 
+#### Behavior
+| option | behavor |
+| --- | --- |
+| no option |  | 
+| `-SP` | Always 5'soft-clipped and 3'hard-clipped. The other mate records the soft-clipped as mate. |
+| `-SP5` | Always 3'soft-clipped and 5'hard-clipped. The other mate records the soft-clipped as mate. |
+| `-SPM` |  | 
+
+
 ### Examples
 #### Example 1
 `-SP`
