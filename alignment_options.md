@@ -3,6 +3,8 @@
 Aligned `GM12878_SRR1658581_1pc_1_R2.fastq.h10000` using bwa mem with different options.
 
 ### Number of aligned reads
+| option | number of aligned reads |
+|---|---|---|
 | no option |  | 
 | `-SP` |  |
 | `-SP5` | 2499 |
