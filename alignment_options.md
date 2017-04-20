@@ -28,7 +28,7 @@ paired-end flag |
 | PE | `-SP5` | 3'soft-clipped and 5'hard-clipped. | The other mate records the soft-clipped as mate. | supplementary alignment flag on hard-clipped one | no improper pair flag | paired-end flag |
 | PE | `-SPM` | 5'soft-clipped and 3'hard-clipped. | The other mate records the soft-clipped as mate. | secondary alignment flag on hard-clipped one | no improper pair flag | paired-end flag |
 | PE | `-SP5M` | 3'soft-clipped and 5'hard-clipped. | The other mate records the soft-clipped as mate. | secondary alignment flag on hard-clipped one | no improper pair flag | paired-end flag |
-| SE | no option, no fixmate | 5'soft-clipped and 3'hard-clipped. | no mate matching | supplementary alignment flag on hard-clipped one | no improper pair flag | no paired-end flag
+| SE | no option, no fixmate | 5'soft-clipped and 3'hard-clipped. | no mate matching | supplementary alignment flag on hard-clipped one | no improper pair flag | no paired-end flag |
 | SE | no option, fixmate | 5'soft-clipped and 3'hard-clipped. | The other mate records the soft-clipped as mate. | supplementary alignment flag on hard-clipped one | no improper pair flag | no paired-end flag on hard-clipped |
 
 * Note
