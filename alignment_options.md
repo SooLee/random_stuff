@@ -1,8 +1,10 @@
 
-### Brief summary
+## Brief summary
 Aligned `GM12878_SRR1658581_1pc_1_R2.fastq.h10000` (2500 reads) using bwa mem with different options.
 
 ***
+
+## Paired-end mode
 
 ### Number of aligned reads
 
