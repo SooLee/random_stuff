@@ -21,7 +21,7 @@ Aligned `GM12878_SRR1658581_1pc_1_R2.fastq.h10000` (2500 reads) using bwa mem wi
 
 ### Behavior
 | PE vs SE | option | clipping | mate matching | s/2048 flag | P flag | p flag |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- |
 | PE | no option | 5'soft-clipped and 3'hard-clipped. | The other mate records the soft-clipped as mate. | supplementary alignment flag on hard-clipped one | improper pair flag on discordant reads | paired-end flag |
 | PE | `-SP` | 5'soft-clipped and 3'hard-clipped. | The other mate records the soft-clipped as mate. | supplementary alignment flag on hard-clipped one | no improper pair flag |
 paired-end flag |
