@@ -14,6 +14,10 @@ Aligned `GM12878_SRR1658581_1pc_1_R2.fastq.h10000` (2500 reads) using bwa mem wi
 * `-M` : same as PE
 * fixmate (SE) : mate matching & adding p (paired-end) flag, except hard-clipped one.
 
+#### Proposal
+PE `-SP5M`
+
+
 ***
 
 ### Number of aligned reads
