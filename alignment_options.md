@@ -2,6 +2,8 @@
 ### Brief summary
 Aligned `GM12878_SRR1658581_1pc_1_R2.fastq.h10000` (2500 reads) using bwa mem with different options.
 
+<br>
+
 #### Conclusions
 ##### Paired-end (PE) : `-SP5M`
 * `-5` : 3'soft-clipped and 5'hard-clipped.
@@ -13,6 +15,8 @@ Aligned `GM12878_SRR1658581_1pc_1_R2.fastq.h10000` (2500 reads) using bwa mem wi
 * `-5` : same as PE
 * `-M` : same as PE
 * fixmate (SE) : mate matching & adding p (paired-end) flag, except hard-clipped one.
+
+<br>
 
 #### Proposal
 PE `-SP5M`
