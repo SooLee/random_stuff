@@ -7,6 +7,7 @@ Aligned `GM12878_SRR1658581_1pc_1_R2.fastq.h10000` (2500 reads) using bwa mem wi
 * `-5` : 3'soft-clipped and 5'hard-clipped.
 * `-M` : secondary alignment flag on hard-clipped one (instead of supplementary alignment flag)
 * `-SP` : prevents forced mate mapping (more consistent with SE) - see [example4](#example-4)
+* Read pairs mapped with SE but not with `-SP` were due to incomplete mate matching in SE. - see [example5](#example-5)
 
 ##### Single-end (SE) : `-5M` + fixmate
 * `-5` : same as PE
@@ -286,7 +287,8 @@ SRR1658581.87718	pU	chr2	84908045	53	101M	=	84908045	0	TTCCACACCTCCGCCTCCCGAGTTC
 ```
 
 
-#### example 5 (just comparing PE `-SP` and SE for pairs not aligned with PE)
+#### example 5 
+* (just comparing PE `-SP` and SE for pairs not aligned with PE)
 PE `-SP`
 ```
 SRR1658581.53064	pu1	chr3	47688381	0	*	=	47688381	0	TTCTCAATATGTTTATTTGTTTTGTTAGTTCTCCAAATATACCCAGTCTCCATGCTGAGTTACCCTCCTATGTAGGCACTCTCCAACCAACCTTCCCAACA	CCCFFFFFHHHHHJIJJJIGIJJJJ<HHHIIIGHGGCHGHIE9BCGDBDEE@GHHHC@HBFFCC3)BBAH>)8@=DDEGCHEEEEFFFFDDAEDCCCCCB1	AS:i:0	XS:i:0
