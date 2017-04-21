@@ -2,6 +2,17 @@
 ### Brief summary
 Aligned `GM12878_SRR1658581_1pc_1_R2.fastq.h10000` (2500 reads) using bwa mem with different options.
 
+#### Conclusions
+##### Paired-end (PE) : `-SP5M`
+* `-5` : 3'soft-clipped and 5'hard-clipped.
+* `-M` : secondary alignment flag on hard-clipped one (instead of supplementary alignment flag)
+* `-SP` : prevents forced mate mapping (more consistent with SE) - see [example4](#example-4)
+
+##### Single-end (SE) : `-5M` + fixmate
+* `-5` : same as PE
+* `-M` : same as PE
+* fixmate (SE) : mate matching & adding p (paired-end) flag, except hard-clipped one.
+
 ***
 
 ### Number of aligned reads
