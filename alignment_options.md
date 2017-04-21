@@ -24,15 +24,15 @@ Aligned `GM12878_SRR1658581_1pc_1_R2.fastq.h10000` (2500 reads) using bwa mem wi
 ### Behavior
 | PE vs SE | option | clipping | mate matching | s/2048 flag | P flag | p flag |
 | --- | --- | --- | --- | --- | --- | --- |
-| PE | no option | 5'soft-clipped and 3'hard-clipped. | The other mate records the soft-clipped as mate. | supplementary alignment flag on hard-clipped one | improper pair flag on discordant reads | paired-end flag |
-| PE | `-SP` | 5'soft-clipped and 3'hard-clipped. | The other mate records the soft-clipped as mate. | supplementary alignment flag on hard-clipped one | no improper pair flag | paired-end flag |
+| PE | no option | either way | The other mate records the soft-clipped as mate. | supplementary alignment flag on hard-clipped one | improper pair flag on discordant reads | paired-end flag |
+| PE | `-SP` | either way | The other mate records the soft-clipped as mate. | supplementary alignment flag on hard-clipped one | no improper pair flag | paired-end flag |
 | PE | `-SP5` | 3'soft-clipped and 5'hard-clipped. | The other mate records the soft-clipped as mate. | supplementary alignment flag on hard-clipped one | no improper pair flag | paired-end flag |
-| PE | `-SPM` | 5'soft-clipped and 3'hard-clipped. | The other mate records the soft-clipped as mate. | secondary alignment flag on hard-clipped one | no improper pair flag | paired-end flag |
+| PE | `-SPM` | either way | The other mate records the soft-clipped as mate. | secondary alignment flag on hard-clipped one | no improper pair flag | paired-end flag |
 | PE | `-SP5M` | 3'soft-clipped and 5'hard-clipped. | The other mate records the soft-clipped as mate. | secondary alignment flag on hard-clipped one | no improper pair flag | paired-end flag |
 | PE | `-SP5MU0` | 3'soft-clipped and 5'hard-clipped. | The other mate records the soft-clipped as mate. | secondary alignment flag on hard-clipped one | no improper pair flag | paired-end flag |
-| SE | no option, no fixmate | 5'soft-clipped and 3'hard-clipped. | no mate matching | supplementary alignment flag on hard-clipped one | no improper pair flag | no paired-end flag |
-| SE | no option, fixmate | 5'soft-clipped and 3'hard-clipped. | The other mate records the soft-clipped as mate. no mate matching for hard-clipped one | supplementary alignment flag on hard-clipped one | no improper pair flag | no paired-end flag on hard-clipped |
-| SE | `-5M`, fixmate | 3'soft-clipped and 5'hard-clipped. | The other mate records the soft-clipped as mate. no mate matching for hard-clipped one | supplementary alignment flag on hard-clipped one | no improper pair flag | no paired-end flag on hard-clipped |
+| SE | no option, no fixmate | either way | no mate matching | supplementary alignment flag on hard-clipped one | no improper pair flag | no paired-end flag |
+| SE | no option, fixmate | either way | The other mate records the soft-clipped as mate. no mate matching for hard-clipped one | supplementary alignment flag on hard-clipped one | no improper pair flag | no paired-end flag on hard-clipped |
+| SE | `-5M`, fixmate | 3'soft-clipped and 5'hard-clipped. | The other mate records the soft-clipped as mate. no mate matching for hard-clipped one | secondary alignment flag on hard-clipped one | no improper pair flag | no paired-end flag on hard-clipped |
 
 
 * Note
