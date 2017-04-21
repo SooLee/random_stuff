@@ -73,6 +73,8 @@ r : reverse
 R : mate is reverse
 s : secondary alignment
 P : improperly aligned
+u : unmapped
+U : mate unmapped
 flag 2048 (supplementary alignment) is not displayed with this option
 ```
 
