@@ -29,6 +29,8 @@ Aligned `GM12878_SRR1658581_1pc_1_R2.fastq.h10000` (2500 reads) using bwa mem wi
 | SE | no option, fixmate | 2499 | 2465 |
 | SE | `-5M`, fixmate | 2499 | 2465 |
 
+* All of the different cases between PE with `-SP` and SE in terms of number of aligned pairs were caused by the hard-clipped alignment missing a 'mate unmapped' flag due to the missing mate matching on hard-clipped ones in SE. 
+
 
 ***
 
