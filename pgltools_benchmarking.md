@@ -10,6 +10,6 @@
 
 ![](pgltools_benchmarking/pgltools_benchmarking.20170427.png)
 
-* Estimated memory and run time for 1 billion reads is ~600GB mem and ~2 hours of run time.
 * I'm guessing that most of this seems to be spent on building an internal index.
-
+* Estimated memory and run time for 1 billion reads is ~600GB mem and ~2 hours of run time.
+* It is practically difficult to use for large-scale Hi-C files.
