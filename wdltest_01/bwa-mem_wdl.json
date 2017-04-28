@@ -1,0 +1,9 @@
+{
+    "bwa_mem_test.bwa_mem.input_fastq1": "/Users/soo/data/hic/fastq/SRR1658832_R1.fastq",
+    "bwa_mem_test.bwa_mem.input_fastq2": "/Users/soo/data/hic/fastq/SRR1658832_R1.fastq",
+    "bwa_mem_test.bwa_mem.bwaIndex": "/Users/soo/data/references/hg38.bwaIndex.tgz ",
+    "bwa_mem_test.bwa_mem.output_prefix": "out",
+    "bwa_mem_test.bwa_mem.nThreads": 8,
+    "bwa_mem_test.bwa_mem.output_dir": "."
+}
+
