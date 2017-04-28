@@ -130,6 +130,19 @@ cromwell run wdltest_01/bwa-mem.wdl wdltest_01/bwa-mem_wdl.json
 [2017-04-28 15:12:44,87] [error] BackgroundConfigAsyncJobExecutionActor [4c0215a8bwa_mem_test.bwa_mem:NA:1]: Error attempting to Execute
 ```
 The earliest error I get says input files cannot be linked or copied.
-Possibly because here I used the absolute path instead of a file under the current directory.
+
+Possibly because here I used the absolute path instead of a file under the current directory?
+
+
+#### using files under current directory
+```bash
+cromwell run wdltest_01/bwa-mem.wdl wdltest_01/bwa-mem_wdl2.json
+```
+[2017-04-28 15:53:02,17] [warn] Localization via hard link has failed: /Users/soo/git/random_stuff/cromwell-executions/bwa_mem_test/24e6b57b-f2a2-4772-b615-423e34343361/call-bwa_mem/inputs/Users/soo/git/random_stuff/hg38.bwaIndex.tgz  -> /Users/soo/git/random_stuff/hg38.bwaIndex.tgz 
+[2017-04-28 15:53:02,17] [warn] Localization via copy has failed: /Users/soo/git/random_stuff/hg38.bwaIndex.tgz 
+```
+Still getting the same error.
+
+Not sure yet what is causing this problem.
 
 
