@@ -317,7 +317,7 @@ SRR1658581.53064		chr8	78322647	13	57H44M	*	0	0	GATCTGCCTACCTCTGCTTCCCAAAGTGTTGG
 
 
 ### Comparison of the content of the file between SE vs PE.
-* The comparison was done on the sam/bam files excluding header lines, and only on column 1,3,4,5,6 (read ID, chromosome, position, CIGAR, MAPQ), and after sorting. (Mate-related columns and other supplementary columns are excluded).
+* The comparison was done on the sam/bam files excluding header lines, and only on column 1,3,4,5,6 (read ID, chromosome, position, CIGAR, MAPQ), and excluding lines with MAPQ=0, and then after sorting. (Mate-related columns and other supplementary columns are excluded).
 
 * Comparing the content between PE `-SP` and SE `no option, fixmate` resulted in difference in one chimeric read. The difference was 1) flipping between soft-clipped and hard-clipped and 2) MAPQ score of one of the alignments (0 vs 28).
 
