@@ -18,7 +18,7 @@ Aligned `GM12878_SRR1658581_1pc_1_R1.fastq.h10000` & `GM12878_SRR1658581_1pc_1_R
 
 <br>
 
-* There was no difference in the content between PE `-SP5M` and SE.
+* There was no difference in the alignment between PE `-SP5M` and SE `-5M`.
 
 #### Proposal
 PE `-SP5M`
