@@ -89,4 +89,6 @@ Pairsamtools makes more sense in this particular case.
 
 ![](images/20170814_165909.jpg)
 
+* These cases should be thrown away because it doesn't contain information about contacting loci.
+
 
