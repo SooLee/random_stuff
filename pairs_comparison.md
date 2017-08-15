@@ -4,8 +4,7 @@
 ### Data
 * Input bam file that was fed to pairsamtools `/n/data1/hms/dbmi/park/DATA/4DN/data_files/bam/Rao_et_al/SRR1658672.bam` (orchestra) (51G)
   * Scott's final output: `~spk8/work/data/4dn/pipeline/pairsam/Rao_et_al/SRR1658672_4_16G_sorted_16G.nodups.pairs.gz` (orchestra) (3.4G)
-* The corresponding fastq was fed to jucier to create pairs. https://data.4dnucleome.org/workflow-runs-sbg/92b59a5e-c144-412d-a195-98f1f1ae8311/#out_pairs.0
-(3.92 GB pairs file)
+* The corresponding fastq was fed to jucier to create pairs. https://s3.amazonaws.com/elasticbeanstalk-fourfront-webdev-wfoutput/755230c2-7ce1-4f31-b101-eb2668083492/4DNFI9U1FBR2.pairs.gz (3.92 GB pairs file)
 * The file size difference between the two pairs may be due to the number of columns
 
 ### Method
@@ -40,8 +39,8 @@ GLPB22-B5C:515:H0993ADXX:2:2214:7955:30678    chrY    56886323    chrY    568866
 
   * We should remove `/1` and `/2` from juicer pairs
   * We should add 1 to the positions to juicer pairs when the strand is -.
-
 * So, before `diff` the following code has to be applied to juicer-produced pairs to make it comparable to pairsamtools pairs.
+
 ```
 zcat <file> | sed "s/\/[12]//g" | awk '{if ($6=="-") $3=$3+1; if ($7=="-") $5=$5+1; print $1"\t"$2"\t"$3"\t"$4"\t"$5"\t"$6"\t"$7}' 
 ```
