@@ -1,6 +1,6 @@
 ## cooler balance / zoomify
 
-* input : s3://elasticbeanstalk-fourfront-webprod-wfoutput/acdab973-8876-4a58-a701-97e7f30e3f0a/4DNFIHKCL9SF.cool 
+* input : s3://elasticbeanstalk-fourfront-webprod-wfoutput/acdab973-8876-4a58-a701-97e7f30e3f0a/4DNFIHKCL9SF.cool (3.7 GB, 4DN Rao02 set) 
 * (res 5000bp)
 * experimented on Amazon instance (r3.8xlarge, 244GB mem, 32 cores)
 * on docker `duplexa/4dn-hic:v32` (cooler 0.7.4)
