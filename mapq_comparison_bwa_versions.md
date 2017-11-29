@@ -31,7 +31,7 @@
 * (Dhawal Jain)
   * 'old' `bwa mem` was run in paired-end mode with either `-SP5M` or `-SPM` on a real Hi-C data. Then, various alignment categories were counted using `pairsamtools`, using a version available mid-September 2017.
     * ![](images/alignment_category_bwa_mem_SP5M_vs_SPM.png)
-    * More reads are lost to MAPQ=0 when `SP5M` was used.
+    * *More reads are lost to MAPQ=0 when `SP5M` was used with the 'old' version of `bwa`*.
     * The difference was probably because the MAPQ of a secondary alignment was lowered to that of primary alignment in both cases, but the choice of the primary alignment was different and without `-5` the priamary alignment must have a better MAPQ score, because by default `bwa` chooses the alignment with the maximum alignment score to be primary.
     * This is consistent with what Neva observed about the 'old' version of 'bwa'.
 
@@ -39,13 +39,12 @@
 #### MAPQ score distribution, old vs new
 * (Carl Vitzthum)
   * 'old' and 'new' versions of `bwa mem` were run in paired-end mode with `-SP5M` on a real Hi-C data. Then, compared MAPQ score distribution among primary alignments (`samtools view -F256` filtering)
-    * MAPQ score distribution of primary alignments was identical between old and new versions of `bwa`.
+    * *MAPQ score distribution of primary alignments was identical between old and new versions of `bwa`.*
     * This makes sense since the new version should affect only supplementary/secondary alignments, and in this case, the reads are grouped into primary vs secondary due to the `-M` option.
 
   * 'old' and 'new' versions of `bwa mem` were run in paired-end mode with either `-SP5M` or `-SP5` on a real Hi-C data. Then, compared MAPQ score distribution among all alignments (no filtering)
     * ![](images/MAPQ_score_dist_primary_only_old_vs_new.png)
-    * MAPQ scores were higher with the new version with either `-SP5M` and `-SP5` flags.
+    * *MAPQ scores were higher with the new version with either `-SP5M` and `-SP5` flags.*
     * This also makes sense since the new version does *not* lower MAPQ for supplemenary (`-SP5`) or secondary (`-SP5M`) alignments when `-5` is used.
-    * The same effect applies to both secondary and supplementary alignments.
+    * *The same effect applies to both secondary and supplementary alignments. (not quantified)*
 
-    
