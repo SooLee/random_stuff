@@ -33,6 +33,7 @@
     * ![](images/alignment_category_bwa_mem_SP5M_vs_SPM.png)
     * More reads are lost to MAPQ=0 when `SP5M` was used.
     * The difference was probably because the MAPQ of a secondary alignment was lowered to that of primary alignment in both cases, but the choice of the primary alignment was different and without `-5` the priamary alignment must have a better MAPQ score, because by default `bwa` chooses the alignment with the maximum alignment score to be primary.
+    * This is consistent with what Neva observed about the 'old' version of 'bwa'.
 
 
 #### MAPQ score distribution, old vs new
