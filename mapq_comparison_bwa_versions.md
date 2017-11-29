@@ -13,8 +13,8 @@
 
 * To summarize the difference between old and new:
   * Old version : always lower MAPQ for supp/sec
-  * New version : lower MAPQ for supp/sec only without -5
-  * Primary alignments should have identical MAPQ between old and new.
+  * New version : lower MAPQ for supp/sec without -5 but not with -5
+  * Primary/representative alignments should have identical MAPQ between old and new.
   * Supp/Sec alignment should have higher MAPQ in new with -5.
   * Code commits
     * https://github.com/lh3/bwa/commit/340babdd671eeeb3c7bfbf2e4ad1e761ece94983 
