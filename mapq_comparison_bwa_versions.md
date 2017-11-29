@@ -1,4 +1,4 @@
-* The following is some analysis of two `bwa` versions: 'old'(=bwa-0.7.15-1142-dirty) and 'new'(=bwa_0.7.17), with `-SP5M` option, performed by Carl Vitzthum and Dhawal Jain. The purpose of the analysis
+* The following is some analysis of two `bwa` versions: 'old'(=bwa-0.7.15-1142-dirty) and 'new'(=bwa_0.7.17), with `-SP5M` option, performed by Carl Vitzthum and Dhawal Jain. The purpose of the analysis was to confirm the 4DN-DCIC proposed alignment option for Hi-C data.
 
 ### Intro of the new version
 * Thew 'new' version of `bwa` was released by Heng Li to correct an issue of reporting different MAPQ scores when run with -5 vs no -5. The source of the problem was that `bwa` always capped the MAPQ score of the supplementary/secondary alignment to that of representative/primary alignment. Since the option -5 changes the choice of representative/primary alignment, the MAPQ score can change. Neva Durand found and reported this issue and the new version now does *not* cap MAPQ scores when the option -5 is used.
