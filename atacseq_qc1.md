@@ -19,7 +19,7 @@ where Filtering removes the following:
 * The value for 'paired_end' (starting number) - duped reads or 'paired_end' * (1 - dup%) matches the number of reads in the final deduped bam file.
 * None of the values for `total_reads` in PBC QC, however, matches the number of reads in the final deduped bam file - chrM.
 
-### Conclusion
+### Summary
 Conclusively, we can report dup% and either `paired_end` (starting number) as Filtered but undeduped reads or 'paired_end' * (1 - dup%) as Filtered and deduped reads. I think the latter makes more sense. Then, we will have only two values : dup% and filtered and deduped reads. We could also report filtered and undeduped reads as 'properly paired uniquely mapped reads'.
 
 
