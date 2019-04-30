@@ -1,6 +1,8 @@
 ## Confirmation for some QC metrics for ENCODE ATAC-seq pipeline (Aln-only)
 
 I'm trying to confirm some qc metrics in the ATACseq QC output from the Aln-only step.
+* Example QC report : https://s3.amazonaws.com/elasticbeanstalk-fourfront-webprod-wfoutput/4DNFIOWMJCK6qc_report.html
+
 I will try to confirm the following, by actually comparing the bam file with the qc stat from a small test run.
 
 * Numbers reported in the flagstat report are numbers of 'alignments' not the numbers of 'reads' (We do not want to use them as selected metrics).
@@ -8,7 +10,7 @@ I will try to confirm the following, by actually comparing the bam file with the
 * According to Daniel, the 'total read' value from PBC QC is the 'unfiltered, undeduped number of mapped reads minus chrM'. But I see that this is not correct. That number is actually the 'filtered but undeduped number of mapped reads minus chrM'.
 * The 'paired end' value from dedup QC is also 'filtered but undeduped number of mapped reads'.
 
-From the atac-seq-pipeline code, the following is the filtering step.
+From the atac-seq-pipeline code (https://github.com/4dn-dcic/atac-seq-pipeline/blob/master/src/encode_filter.py), the following is the filtering step.
 * `merged_bam` (bowtie2 output) --> Filtering -->  `filt_bam` --> `Markdup/dedup_qc` --> `dup_mark_bam` --> `PBC_QC`
 where Filtering removes the following:
 * unmapped reads, reads whose mate is unmapped, vendor qc check failed(?), multimappers
