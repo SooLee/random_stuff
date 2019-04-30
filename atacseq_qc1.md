@@ -8,7 +8,7 @@ I will try to confirm the following, by actually comparing the bam file with the
 * According to Daniel, the 'total read' value from PBC QC is the 'unfiltered, undeduped number of mapped reads minus chrM'. But I see that this is not correct. That number is actually the 'filtered but undeduped number of mapped reads minus chrM'.
 * The 'paired end' value from dedup QC is also 'filtered but undeduped number of mapped reads'.
 
-From the atac-seq-pipeline code, the following is the filtering.
+From the atac-seq-pipeline code, the following is the filtering step.
 * `merged_bam` (bowtie2 output) --> Filtering -->  `filt_bam` --> `Markdup/dedup_qc` --> `dup_mark_bam` --> `PBC_QC`
 where Filtering removes the following:
 * unmapped reads, reads whose mate is unmapped, vendor qc check failed(?), multimappers
@@ -19,6 +19,7 @@ where Filtering removes the following:
 * The value for 'paired_end' (starting number) - duped reads or 'paired_end' * (1 - dup%) matches the number of reads in the final deduped bam file.
 * None of the values for `total_reads` in PBC QC, however, matches the number of reads in the final deduped bam file - chrM.
 
+### Conclusion
 Conclusively, we can report dup% and either `paired_end` (starting number) as Filtered but undeduped reads or 'paired_end' * (1 - dup%) as Filtered and deduped reads. I think the latter makes more sense. Then, we will have only two values : dup% and filtered and deduped reads. We could also report filtered and undeduped reads as 'properly paired uniquely mapped reads'.
 
 
