@@ -153,3 +153,26 @@ cat /data1/wdl/cromwell-executions/atac/b830b665-9954-4db0-9b78-52dc06df156e/cal
 * However, the final number 510527 (total mapped reads in proper pairs in the deduped bam - chrM) is not in the report. It also does not match 515308 * 0.991397 (NRF) = 510155.
 
 
+### Checking the final nodup flagstat's number
+(Daniel's suggestion)
+
+```
+cat /data1/wdl/cromwell-executions/atac/a7ca60fe-b425-4c63-940f-9de4d12eaf6e/call-filter/shard-0/execution/4DNFIIG3K5CI.h2M.trim.merged.nodup.flagstat.qc
+```
+```
+1283276 + 0 in total (QC-passed reads + QC-failed reads)
+0 + 0 secondary
+0 + 0 supplementary
+0 + 0 duplicates
+1283276 + 0 mapped (100.00%:N/A)
+1283276 + 0 paired in sequencing
+641638 + 0 read1
+641638 + 0 read2
+1283276 + 0 properly paired (100.00%:N/A)
+1283276 + 0 with itself and mate mapped
+0 + 0 singletons (0.00%:N/A)
+0 + 0 with mate mapped to a different chr
+0 + 0 with mate mapped to a different chr (mapQ>=5)
+```
+
+The final number 641638 matches the final number of reads (because at this stage all the multimappers have been filtered out).
