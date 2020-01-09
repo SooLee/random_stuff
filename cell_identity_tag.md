@@ -39,3 +39,6 @@ ST-E00181:268:HJNHFCCXX:1:1101:18203:1485       83      chr5    177674646       
 
 This information could be then saved in a custom cell_identity column in the PAIRS file.
 
+The following link describes how cell-specific barcodes are stored in the CB field in the 10x genomics bam files.
+https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/output/bam
+
